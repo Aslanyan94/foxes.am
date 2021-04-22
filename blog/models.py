@@ -8,7 +8,7 @@ class Blog(models.Model):
     views = models.IntegerField(verbose_name="Views")
 
     def __str__(self):
-        return self.blog_title
+        return f"{self.blog_title}"
 
     class Meta:
         verbose_name = "Category"
@@ -22,7 +22,7 @@ class CommentModel(models.Model):
     created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return self.blog
+        return f"{self.blog}"
 
     class Meta:
         verbose_name = "Comment"
