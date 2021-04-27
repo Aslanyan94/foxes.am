@@ -27,7 +27,7 @@
 
 <a href = "{% url 'blog' %}">Go Back</a>
 
-{% if request.user.is_authenticated %}
+<!--{% if request.user.is_authenticated %}-->
     <form method="post">
     {%csrf_token %}
     <H2> Comment Here</H2>
@@ -40,15 +40,15 @@
         <strong> USER: </strong> {{comment.com_cont}}
     </p>
 {%endfor %}
-{% else %}
+<!--{% else %}-->
 
-<h2> If you want to comment here,you must <a href="{% url 'login' %}">SIGN IN</a>! </h2>
-    {%for comment in comments%}
-    <p>
-        <strong> USER: </strong> {{comment.com_cont}}
-    </p>
-    {% endfor %}
-{% endif %}
+<!--<h2> If you want to comment here,you must <a href="{% url 'login' %}">SIGN IN</a>! </h2>-->
+<!--    {%for comment in comments%}-->
+<!--    <p>-->
+<!--        <strong> USER: </strong> {{comment.com_cont}}-->
+<!--    </p>-->
+<!--    {% endfor %}-->
+<!--{% endif %}-->
 
 
 </body>

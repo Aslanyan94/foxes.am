@@ -22,6 +22,7 @@ urlpatterns = [
     path('home/',index,name = ""),
     path("register/", register, name="register"),
     path("login/", user_login, name="login"),
+    path("accounts/login/", user_login, name="accounts/login/"),
     path("logout/", user_logout, name="logout"),
     path("blog/", include('blog.urls')),
     path("league/", include("league.urls")),
