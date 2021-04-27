@@ -25,5 +25,5 @@ urlpatterns = [
     path("accounts/login/", user_login, name="accounts/login/"),
     path("logout/", user_logout, name="logout"),
     path("blog/", include('blog.urls')),
-    path("league/", include("league.urls")),
+    path("teams/", include("our_team.urls")),
 ]
