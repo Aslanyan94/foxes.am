@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import LesTeam, LesMatches, LesPlayers
+from our_team.models import LesTeam
 from django.http import HttpResponse
 import json
 

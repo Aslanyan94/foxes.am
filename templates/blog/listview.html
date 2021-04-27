@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Title</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
 
 {% for data in dataset %}
 <h3>{{data.blog_title}}</h3>
-<a href = "{% url 'blog' _id=data.id %}">Read More</a>
+<a href = "{% url 'blogs' _id=data.id %}">Read More</a>
 <hr/>
 {% endfor %}
 

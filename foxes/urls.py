@@ -19,7 +19,7 @@ from registration.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index),
+    path('home/',index,name = ""),
     path("register/", register, name="register"),
     path("login/", user_login, name="login"),
     path("logout/", user_logout, name="logout"),

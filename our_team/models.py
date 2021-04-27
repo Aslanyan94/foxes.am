@@ -31,8 +31,8 @@ class MadPlayers(models.Model):
         return f"{self.player_fullname}"
 
     class Meta:
-        verbose_name = "Mad's player"
-        verbose_name_plural = "Mad's players"
+        verbose_name = "Mad player"
+        verbose_name_plural = "Mad players"
 
 
 class MadTopScorer(models.Model):
@@ -43,7 +43,7 @@ class MadTopScorer(models.Model):
         return f"{self.player} {self.point}"
 
     class Meta:
-        verbose_name = "Mad's Top Scorer"
+        verbose_name = "Mad Top Scorer"
 
 
 class MadTopRebounder(models.Model):
@@ -54,7 +54,7 @@ class MadTopRebounder(models.Model):
         return f"{self.player} {self.point}"
 
     class Meta:
-        verbose_name = "Mad's Top Rebounder"
+        verbose_name = "Mad Top Rebounder"
 
 
 class MadTopAssister(models.Model):
@@ -65,7 +65,7 @@ class MadTopAssister(models.Model):
         return f"{self.player} {self.point}"
 
     class Meta:
-        verbose_name = "Mad's Top Assister"
+        verbose_name = "Mad Top Assister"
 
 
 # TABLES FOR LES FOXES
@@ -98,8 +98,8 @@ class LesPlayers(models.Model):
         return f"{self.player_fullname}"
 
     class Meta:
-        verbose_name = "Les's player"
-        verbose_name_plural = "Les's players"
+        verbose_name = "Les player"
+        verbose_name_plural = "Les players"
 
 
 class LesTopScorer(models.Model):
@@ -110,7 +110,7 @@ class LesTopScorer(models.Model):
         return f"{self.player} {self.point}"
 
     class Meta:
-        verbose_name = "Les's Top Scorer"
+        verbose_name = "Les Top Scorer"
 
 
 class LesTopRebounder(models.Model):
@@ -121,7 +121,7 @@ class LesTopRebounder(models.Model):
         return f"{self.player} {self.point}"
 
     class Meta:
-        verbose_name = "Les's Top Rebounder"
+        verbose_name = "Les Top Rebounder"
 
 
 class LesTopAssister(models.Model):
@@ -132,7 +132,7 @@ class LesTopAssister(models.Model):
         return f"{self.player} {self.point}"
 
     class Meta:
-        verbose_name = "Les's Top Assister"
+        verbose_name = "Les Top Assister"
 
 
 # TABLES FOR YOUNG FOXES
@@ -165,8 +165,8 @@ class YoungPlayers(models.Model):
         return f"{self.player_fullname}"
 
     class Meta:
-        verbose_name = "Young's player"
-        verbose_name_plural = "Young's players"
+        verbose_name = "Young player"
+        verbose_name_plural = "Young players"
 
 
 # TABLES FOR OLD FOXES
@@ -199,7 +199,7 @@ class OldPlayers(models.Model):
         return f"{self.player_fullname}"
 
     class Meta:
-        verbose_name = "Old's player"
-        verbose_name_plural = "Old's players"
+        verbose_name = "Old player"
+        verbose_name_plural = "Old players"
 
 # Create your models here.
