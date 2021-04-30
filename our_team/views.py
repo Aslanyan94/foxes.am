@@ -28,8 +28,8 @@ def mad_views(request):
             players["sh_number"] = game_query.sh_number
             players["g_played"] = game_query.g_played
             players["position"] = game_query.position
-            players["height"] = game_query.position
-            players["b_date"] = game_query.position
+            players["height"] = game_query.height
+            players["b_date"] = game_query.b_date
             players["pts"] = game_query.pts
             players["avg_point"] = game_query.avg_point
             response_players.append(players)
@@ -93,8 +93,8 @@ def les_views(request):
             players["sh_number"] = game_query.sh_number
             players["g_played"] = game_query.g_played
             players["position"] = game_query.position
-            players["height"] = game_query.position
-            players["b_date"] = game_query.position
+            players["height"] = game_query.height
+            players["b_date"] = game_query.b_date
             players["pts"] = game_query.pts
             players["avg_point"] = game_query.avg_point
             response_players.append(players)
@@ -158,8 +158,8 @@ def young_views(request):
             players["sh_number"] = game_query.sh_number
             players["g_played"] = game_query.g_played
             players["position"] = game_query.position
-            players["height"] = game_query.position
-            players["b_date"] = game_query.position
+            players["height"] = game_query.height
+            players["b_date"] = game_query.b_date
             players["pts"] = game_query.pts
             players["avg_point"] = game_query.avg_point
             response_players.append(players)
@@ -193,8 +193,8 @@ def old_views(request):
             players["sh_number"] = game_query.sh_number
             players["g_played"] = game_query.g_played
             players["position"] = game_query.position
-            players["height"] = game_query.position
-            players["b_date"] = game_query.position
+            players["height"] = game_query.height
+            players["b_date"] = game_query.b_date
             players["pts"] = game_query.pts
             players["avg_point"] = game_query.avg_point
             response_players.append(players)
