@@ -19,9 +19,17 @@
 {% for data in dataset %}
 <h3>{{data.blog_title}}</h3>
 <a href = "{% url 'blogs' _id=data.id %}">Read More</a>
+{% if request.user.is_authenticated %}
+        <form method="GET" id="form-like">
+            <div class="likes">
+                <button onclick="{{ post.likes|add:1 }}">{{ post.likes }}</button>
+            </div>
+        </form>
+{% endif %}
 <hr/>
 {% endfor %}
 
+{{ finaly_parse }}
 
 </body>
 </html>
