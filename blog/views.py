@@ -3,11 +3,12 @@ from .models import Blog, CommentModel
 from .forms import SearchForm, CommentForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from parse.parsing import finaly_parse
+from parse.parsing import reg_list
 
 
 def BlogListView(request):
     dataset = Blog.objects.all()
+    n = 0
     if request.method == 'POST':
         form = SearchForm(request.POST)
         if form.is_valid():
@@ -19,7 +20,8 @@ def BlogListView(request):
         context = {
             'dataset': dataset,
             'form': form,
-            "finaly_parse": finaly_parse,
+            "reg_list": reg_list,
+            'n': n,
         }
     return render(request, 'blog/listview.html', context)
 
