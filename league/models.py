@@ -24,7 +24,7 @@ class LesScheduleAndResults2021(models.Model):
     place = models.CharField(verbose_name="Game Place", max_length=25)
 
     def __str__(self):
-        return f"{self.team1} VS {self.team2}"
+        return f"{self.team1} {self.score} {self.team2} {self.game_dt}"
 
     class Meta:
         verbose_name = "Les Game 20-21"
@@ -39,7 +39,7 @@ class MadScheduleAndResults2122(models.Model):
     place = models.CharField(verbose_name="Game Place", max_length=25)
 
     def __str__(self):
-        return f"{self.team1} VS {self.team2}"
+        return f"{self.team1} {self.score} {self.team2} {self.game_dt}"
 
     class Meta:
         verbose_name = "Mad Game 21-22"

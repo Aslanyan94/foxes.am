@@ -1,0 +1,625 @@
+        #match {
+            z-index: 999999999;
+            color: black;
+            font-family: "Kaushan Script", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        
+        #registr {
+            margin-left: 950px;
+            margin-top: 0;
+            list-style: none;
+            // margin-left: 70%;
+            display: inline-flex;
+            h5 {
+                @media screen and (max-width: 1152px) {
+                    margin-right: 28px;
+                }
+                @media screen and (max-width:1081px) {
+                    margin-right: 18px;
+                }
+            }
+            a {
+                right: 500px;
+                text-decoration: none;
+                font-size: 16px;
+                font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                color: black;
+                margin-right: 35px;
+                padding: 0;
+                @media screen and (max-width: 1152px) {
+                    margin-right: 28px;
+                }
+                @media screen and (max-width:1081px) {
+                    margin-right: 18px;
+                }
+                &:hover {
+                    color: #02cf92;
+                }
+            }
+        }
+        
+        #start_boot {
+            background-image: url(../img/Cover.jpg);
+            background-position: center;
+            padding-top: 35px;
+            height: 650px;
+            @media screen and (max-width: 991px) {
+                padding-top: 0px;
+            }
+            h3 {
+                color: #02cf92;
+                font-family: "Kaushan Script", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                padding-left: 50px;
+                &:hover {
+                    cursor: pointer;
+                }
+                @media screen and (max-width:991px) {
+                    font-size: 19px;
+                    padding-top: 8px;
+                    margin-left: -55px;
+                }
+                @media screen and (max-width:550px) {
+                    padding-left: 80px;
+                }
+            }
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                color: rgb(255, 255, 255);
+                margin-right: 35px;
+                padding: 0;
+                @media screen and (max-width: 1152px) {
+                    margin-right: 28px;
+                }
+                @media screen and (max-width:1081px) {
+                    margin-right: 18px;
+                }
+                &:hover {
+                    color: #02cf92;
+                }
+            }
+            #icon {
+                color: white !important;
+                font-size: 11px;
+                z-index: 20;
+            }
+            #shopping {
+                font-size: 16px;
+                cursor: pointer;
+                color: rgb(255, 255, 255);
+                margin-right: 35px;
+                padding: 0;
+                @media screen and (max-width: 1152px) {
+                    margin-right: 28px;
+                }
+                @media screen and (max-width:1081px) {
+                    margin-right: 18px;
+                }
+                &:hover {
+                    color: #02cf92;
+                }
+            }
+            .navbar-brand {
+                display: none;
+                @media screen and (max-width: 991px) {
+                    display: block;
+                }
+            }
+            .navbar-toggler {
+                @media screen and (max-width: 991px) {
+                    position: absolute;
+                    right: 14px;
+                    top: 3px;
+                    border: none;
+                    height: 36px;
+                    padding-left: 56px;
+                    border-radius: 8px;
+                    z-index: 3000;
+                }
+            }
+            #menu1 {
+                color: white;
+                display: none;
+                background-color: #02cf92;
+                position: absolute;
+                padding-right: 30px;
+                padding-left: 1px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                right: 14px;
+                top: 6px;
+                border-radius: 8px;
+                @media screen and (max-width: 991px) {
+                    display: block;
+                }
+            }
+            #navbarNav {
+                @media screen and (max-width: 991px) {
+                    padding-top: 45px;
+                    margin-left: -260px;
+                    z-index: 2000;
+                    li {
+                        padding-top: 7px;
+                        padding-bottom: 7px;
+                    }
+                }
+            }
+            #div1 {
+                @media screen and (max-width: 991px) {
+                    background-color: rgb(33, 37, 41);
+                    padding-bottom: 6px;
+                    z-index: 30;
+                }
+            }
+            #navbar {
+                @media screen and (max-width: 991px) {
+                    background-color: rgb(33, 37, 41);
+                    z-index: 30;
+                }
+            }
+        }
+        
+        // #aboutid {
+        // }
+        #teamid {
+            margin-top: -25px;
+        }
+        
+        .menu {
+            display: none;
+            position: absolute;
+            // top: 10px;
+            min-width: 93%;
+        }
+        
+        .dropdown:hover .menu {
+            display: block;
+        }
+        
+        .submenu {
+            list-style-type: none;
+            text-align: center;
+            margin-left: -60px;
+            margin-top: 30px;
+        }
+        
+        // .submenu>li+li {
+        //     border: 1px solid white;
+        // }
+        .submenu>li>a {
+            display: block;
+            padding: 0.4em 1.5em;
+            background-color: #6d49bd;
+            color: #6d49bd;
+            text-decoration: none;
+        }
+        
+        .submenu>li>a:hover {
+            color: black;
+        }
+        
+        #result {
+            position: absolute;
+            height: 700px;
+            width: 100%;
+        }
+        
+        #lorem {
+            color: white;
+            z-index: 999999;
+            margin-top: 100px;
+            h2 {
+                margin-left: 390px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .menu2 {
+            display: none;
+            position: absolute;
+        }
+        
+        .dropdown1:hover .menu2 {
+            display: block;
+        }
+        
+        .submenu1 {
+            list-style-type: none;
+            text-align: center;
+            // margin-left: -60px;
+            // padding-bottom: -45px;
+            // margin-top: 10px;
+            margin-left: -110px;
+        }
+        
+        // .submenu>li+li {
+        //     border: 1px solid white;
+        // }
+        .submenu1>li>a {
+            display: block;
+            // padding: 0.4em 1.5em;
+            background-color: #6d49bd;
+            color: #6d49bd;
+            text-decoration: none;
+        }
+        
+        .submenu1>li>a:hover {
+            color: black;
+            // margin-right: 20px;
+            // margin-top: -10px;
+        }
+        
+        // #icons {
+        //     // padding-top: 90px;
+        //     // padding-bottom: 100px;
+        //     // #icon1 {
+        //     //     i {
+        //     //         padding: 30px;
+        //     //         font-size: 60px;
+        //     //         color: rgb(255, 255, 255);
+        //     //         background-color: #6d49bd;
+        //     //         border-radius: 50%;
+        //     //         margin-bottom: 30px;
+        //     //     }
+        //     //     p {
+        //     //         position: relative;
+        //     //         left: -60px;
+        //     //         text-align: justify;
+        //     //         padding-top: 20px;
+        //     //     }
+        //     // }
+        //     // #icon2 {
+        //     //     i {
+        //     //         padding-left: 30px;
+        //     //         padding-right: 30px;
+        //     //         padding-bottom: 33px;
+        //     //         padding-top: 33px;
+        //     //         font-size: 60px;
+        //     //         color: rgb(255, 255, 255);
+        //     //         background-color: #6d49bd;
+        //     //         border-radius: 50%;
+        //     //         margin-bottom: 24px;
+        //     //     }
+        //     //     h4 {
+        //     //         position: relative;
+        //     //         // left: -20px;
+        //     //     }
+        //     //     p {
+        //     //         position: relative;
+        //     //         left: -60px;
+        //     //         text-align: justify;
+        //     //         padding-top: 20px;
+        //     //     }
+        //     // }
+        //     // #icon3 {
+        //     //     i {
+        //     //         margin-left: 450px;
+        //     //         padding-top: 30px;
+        //     //         padding-bottom: 30px;
+        //     //         padding-left: 35px;
+        //     //         padding-right: 35px;
+        //     //         font-size: 60px;
+        //     //         color: rgb(255, 255, 255);
+        //     //         background-color: #6d49bd;
+        //     //         border-radius: 50%;
+        //     //         margin-bottom: 30px;
+        //     //     }
+        //     //     p {
+        //     //         position: relative;
+        //     //         left: 400px;
+        //     //         text-align: justify;
+        //     //         padding-top: 20px;
+        //     //     }
+        //     // }
+        // }
+        #icon2 {
+            z-index: 999999999;
+            // padding-left: 30px;
+            // padding-right: 30px;
+            // padding-bottom: 33px;
+            // padding-top: 33px;
+            font-size: 60px;
+            text-align: left;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            #dvin {
+                margin-left: 800px;
+                margin-top: 100px;
+                position: absolute;
+            }
+            #erebuni {
+                margin-top: 117px;
+            }
+        }
+        
+        // #icon3 {
+        //     z-index: 999999999;
+        //     margin-left: 250px;
+        //     // padding-top: 30px;
+        //     // padding-bottom: 30px;
+        //     // padding-left: 35px;
+        //     // padding-right: 35px;
+        //     font-size: 60px;
+        //     text-align: right;
+        //     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        // }
+        #erebuni {
+            color: whitesmoke;
+            font-style: initial;
+        }
+        
+        #dvin {
+            margin-left: 450px;
+            color: whitesmoke;
+        }
+        
+        #portfolio {
+            padding-top: 500px;
+            background-color: #f8f9fa;
+            padding-bottom: 70px;
+            #tex {
+                margin-left: -0px;
+                color: #6d49bd;
+            }
+            #div_portfolio {
+                h2 {
+                    margin-left: -65px;
+                    margin-bottom: 20px;
+                    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+                }
+                i {
+                    position: relative;
+                    left: -110px;
+                    font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+                }
+            }
+            #forMery {
+                height: 700px;
+                width: 700px;
+            }
+            #forText {
+                text-align: center;
+            }
+            #nkar1 {
+                border: 20px solid #f8f9fa;
+                text-align: center;
+                margin-top: 60px;
+                padding-right: 0;
+                padding-left: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+                &::after {
+                    position: absolute;
+                    content: "+";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 255px;
+                    background-color: #6d49bd;
+                    font-size: 130px;
+                    color: rgb(255, 255, 255);
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    transition: .4s linear;
+                    opacity: 0;
+                }
+                &:hover::after {
+                    opacity: 1;
+                }
+                img {
+                    margin-bottom: 19px;
+                }
+            }
+            #nkar2 {
+                border: 20px solid #f8f9fa;
+                text-align: center;
+                margin-top: 60px;
+                padding-right: 0;
+                padding-left: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+                &::after {
+                    position: absolute;
+                    content: "+";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 255px;
+                    background-color: #6d49bd;
+                    font-size: 130px;
+                    color: rgb(255, 255, 255);
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    transition: .4s linear;
+                    opacity: 0;
+                }
+                &:hover::after {
+                    opacity: 1;
+                }
+                img {
+                    margin-bottom: 19px;
+                }
+            }
+            #nkar3 {
+                border: 20px solid #f8f9fa;
+                text-align: center;
+                margin-top: 60px;
+                padding-right: 0;
+                padding-left: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+                &::after {
+                    position: absolute;
+                    content: "+";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 255px;
+                    background-color: #6d49bd;
+                    font-size: 130px;
+                    color: rgb(255, 255, 255);
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    transition: .4s linear;
+                    opacity: 0;
+                }
+                &:hover::after {
+                    opacity: 1;
+                }
+                img {
+                    margin-bottom: 19px;
+                }
+            }
+        }
+        
+        #about {
+            padding-top: 70px;
+            h1 {
+                color: #6d49bd;
+            }
+            i {
+                margin-left: -120px;
+            }
+        }
+        
+        #our_humble {
+            #text_right {
+                text-align: right;
+                @media screen and (max-width: 991px) {
+                    text-align: center;
+                }
+            }
+            margin-top: 70px;
+            #vuy_ade {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 2px;
+                    top: 210px;
+                    left: 120px;
+                    height: 210px;
+                    background-color: #e9ecef;
+                }
+                @media screen and (max-width:991px) {
+                    text-align: center;
+                }
+            }
+            img {
+                border: 7px solid #e9ecef;
+                border-radius: 50%;
+            }
+            #nkar02 {
+                margin-top: 200px;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 2px;
+                    top: 210px;
+                    left: 120px;
+                    height: 210px;
+                    background-color: #e9ecef;
+                }
+            }
+            #div02 {
+                margin-top: 200px;
+                text-align: left;
+                @media screen and (max-width: 991px) {
+                    text-align: center;
+                }
+            }
+            #nkar03 {
+                margin-top: 200px;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 2px;
+                    top: 210px;
+                    left: 120px;
+                    height: 210px;
+                    background-color: #e9ecef;
+                }
+            }
+            #div03 {
+                margin-top: 200px;
+            }
+            #nkar04 {
+                margin-top: 200px;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 2px;
+                    top: 210px;
+                    left: 120px;
+                    height: 210px;
+                    background-color: #e9ecef;
+                }
+            }
+            #div04 {
+                margin-top: 200px;
+            }
+            #nkar05 {
+                text-align: center;
+                #nkar005 {
+                    margin-top: 200px;
+                    border: 7px solid #e9ecef;
+                    height: 214px;
+                    width: 214px;
+                    padding-top: 60px;
+                    background-color: #6d49bd;
+                    color: #e9ecef;
+                    border-radius: 50%;
+                    b {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        
+        .amazing {
+            margin-top: 50px;
+            padding-top: 50px;
+            h4 {
+                color: #6d49bd;
+            }
+            text-align: center;
+        }
+        
+        .icons {
+            text-align: center;
+            i {
+                color: #6d49bd;
+                font-size: 18px;
+            }
+        }
+        
+        #follow {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        #instago {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            // border: 8px solid blue;
+        }
+        
+        #foto {
+            transition: all 2s linear;
+        }
+        
+        #instago img:hover {
+            transform: scale(.9);
+        }
+        
+        #sponsid {
+            height: 250px;
+            width: 250px;
+            margin-left: 110px;
+        }

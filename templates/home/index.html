@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOXES</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/LesFoxes.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <div class="icons">
+            <a href="https://www.instagram.com/lesfoxes/" id="lesins"><i class="fab fa-instagram">LES FOXES</i></a>
+        </div>
+        <div class="row">
+
+            <h5 id="match">UPCOMING MATCH - </h5>
+
+
+
+
+            <div id="registr">
+                {% if request.user.is_authenticated %}
+
+                <li class="nav-item1">
+                    <a class="nav-link" href="{% url 'register' %}">REGISTRATION</a>
+                </li>
+                <li class="nav-item1">
+                    <a class="nav-link" href="{% url 'login' %}">SIGN IN</a>
+                </li>
+                {% else %}
+                <li class="nav-item1">
+                    WELCOME ,{{ user.username }} | <a class="nav-link" href="#">SIGN OUT</a>
+                </li>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid" id="start_boot">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="div1">
+                <h3>WELCOME TO FOXES ACADEMY</h3>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" id="navbar">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#"></a>
+                    <div>
+                        <span id="menu1">MENU</span>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" id="icon"></span>
+                </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="#">ABOUT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <div class="dropdown-label">
+                                        <a id="mojoj" href=""><img id="" src="" alt=""></a>
+                                    </div>
+                                    <div class="menu">
+                                        <ul id="submenu" class="submenu">
+                                            <li><a href="#">YOUNG FOXES</a> </li>
+                                            <div style="float:right; width: 100%; color: black;">
+                                                <hr/>
+                                            </div>
+                                            <!-- <br> -->
+                                            <li><a href="#">LES FOXES</a> </li>
+                                            <div style="float:right; width: 100%; color: black;">
+                                                <hr/>
+                                            </div>
+                                            <!-- <br> -->
+                                            <li><a href="#">MAD FOXES</a> </li>
+                                            <div style="float:right; width: 100%; color: black;">
+                                                <hr/>
+                                            </div>
+                                            <!-- <br> -->
+                                            <li><a href="#">OLD FOXES</a> </li>
+                                            <div style="float:right; width: 100%; color: black;">
+                                                <hr/>
+                                            </div>
+                                            <!-- <br> -->
+                                            <li><a href="#">OUR TROPHIES</a> </li>
+                                            <div style="float:right; width: 100%; color: black;">
+                                                <hr/>
+                                            </div>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="nav-link" href="#" id="teamid">OUR TEAM</a>
+                            </li>
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="#" id="aboutid">LEAGUE</a>
+                                <div class="dropdown1">
+                                    <div class="dropdown-label1">
+                                        <a id="mojoj1" href=""><img id="" src="" alt=""></a>
+                                    </div>
+                                    <div class="menu2">
+                                        <ul id="submenu1" class="submenu1">
+                                            <li><a href="#">VBET <br> A-LEAGUE</a> </li>
+                                            <div style="float:left; width: 80%; color: black;">
+                                                <hr/>
+                                            </div>
+                                            <!-- <span align="center" width="80" size="0" color="#black"></span> -->
+                                            <!-- <br> -->
+                                            <li><a href="#">VBET <br> ARMENIAN CUP</a> </li>
+                                            <div style="float:left; width: 80%; color: black;">
+                                                <hr/>
+                                            </div>
+                                            <!-- <span align="center" width="80" size="0" color="#black"></span> -->
+                                            <!-- <br> -->
+                                            <li><a href="#">VBET <br> WOMENS CHAMPIONSHIP</a> </li>
+                                            <div style="float:left; width: 80%; color: black;">
+                                                <hr/>
+                                            </div>
+                                            <!-- <span align="center" width="80" size="0" color="#black"></span> -->
+                                            <!-- <br> -->
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">GALLERY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">NEWS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'blog' %}">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <i id="shopping" class="fas fa-shopping-cart"></i>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="result">
+        <img id="result" src="img/resault_cover.jpg" alt="RESULT COVER">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="lorem">
+                <h2>
+                    <b>
+                    LAST MATCHES RESULTS
+        </b>
+                </h2>
+
+            </div>
+        </div>
+    </div>
+    <div class="container" id="icons">
+        <div class="row">
+
+            <div class="res1" id="icon2">
+
+                <p>
+                    <h3 id="dvin">DVIN 87 - 85 MAD FOXES</h3>
+                    <h3 id="erebuni">YEREVAN BASKET 47 - 75 LES FOXES</h3>
+                </p>
+            </div>
+            <!-- <div class="res2" id="icon3">
+
+                <p>
+                    
+                </p>
+            </div> -->
+        </div>
+    </div>
+    <div class="container-fluid" id="portfolio">
+        <div class="row">
+            <div class="col-7 offset-5" id="div_portfolio">
+                <h2>
+                    <b> 
+            <span id="tex">LAST MATCHES HIGHLIGHTS</span>
+          </b>
+                </h2>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="nkar1">
+                    <img src="img/highlights1.jpg" alt="" class="img-fluid">
+                    <h2>
+                        <b>
+            ENTER
+          </b>
+                    </h2>
+                    <i>
+          Illustration
+        </i>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="nkar2">
+                    <img src="img/highlights2.jpg" alt="" class="img-fluid">
+                    <h2>
+                        <b>
+            ENTER
+          </b>
+                    </h2>
+                    <i>
+          ENTER
+        </i>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="nkar3">
+                    <img src="img/highlights3.jpg" alt="" class="img-fluid">
+                    <h2>
+                        <b>
+            ENTER
+          </b>
+                    </h2>
+                    <i>
+          ENTER
+        </i>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="nkar1">
+                    <img src="img/highlights4.jpg" alt="" class="img-fluid">
+                    <h2>
+                        <b>
+          ENTER
+        </b>
+                    </h2>
+                    <i>
+        ENTER
+      </i>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="nkar2">
+                    <img src="img/highlights5.jpg" alt="" class="img-fluid">
+                    <h2>
+                        <b>
+          ENTER
+        </b>
+                    </h2>
+                    <i>
+        ENTER
+      </i>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="nkar3">
+                    <img src="img/highlights6.jpg" alt="" class="img-fluid">
+                    <h2>
+                        <b>
+          ENTER
+        </b>
+                    </h2>
+                    <i>
+        ENTER
+      </i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-7 offset-5">
+                <h1>
+                    <b>
+          LATEST NEWS
+        </b>
+                </h1>
+
+            </div>
+        </div>
+    </div>
+    <div class="container" id="our_humble">
+        <div class="row">
+            <div class="col-lg-5 col-md-7" id="text_right">
+                <h4>
+                    <b>
+           <br>
+           Մերի Գրիգորյան․ «Լես Ֆոքսիս»-ն իր միասնության շնորհիվ գրանցեց այսպիսի արդյունք
+        </b>
+                </h4>
+                <span>
+                    <br>
+                    Հաղթական զգացողություններն անբացատրելի են։ Հպարտ եմ, որ այս հրաշալի թիմի մի մասնիկն եմ։              
+                    <p><a href="../news1/index.html">MORE</a></p>
+      </span>
+            </div>
+            <div class="col-lg-7 col-md-7" id="vuy_ade">
+                <img src="img/Mery_news1.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-7 offset-5" id="nkar02">
+                <img src="img/Harut_news1.jpg" alt="">
+            </div>
+            <div class="col-lg-4 col-md-12" id="div02">
+                <h4>
+                    <b>
+           «Լես Ֆոքսիս»–ի մարզիչ. Շնորհակալ եմ և շնորհավորում եմ իմ թիմին
+           
+        </b>
+                </h4>
+                <span>
+                    <br>
+                    Իրականում խաղը ստացվեց ավելի լարված, քան սպասում էի: Կարծում եմ՝ իսկական եզրափակչի հանդիպում էր: Փաստացի գոհ եմ խաղի արդյունքից, որովհետև հաղթել ենք...
+                    <p><a href="news2/index2.html">MORE</a></p>
+      </span>
+            </div>
+            <div class="col-lg-5 col-md-12 text-right" id="div03">
+                <h4>
+                    <b>
+            «Լես Ֆոքսիս»-ը` VBET կանանց Հայաստանի առաջնության չեմպիոն
+        </b>
+                </h4>
+                <span>
+                VBET Հայաստանի կանանց կանոնավոր առաջնության եզրափակիչ շարքի երկրորդ «Լես Ֆոքսիս» - «Երևան Բասկետ» խաղում, «Լես Ֆոքսիս»-ը 75-47 հաշվով առավելության հասավ «Երևան Բասկետ»-ի նկատմամբ և հռչակվեց առաջնության չեմպիոն: Լավագույն եռյակը եզրափակեց «Հատիս»–ը:
+                <p><a href="news3/index3.html">MORE</a></p>
+      </span>
+            </div>
+            <div class="col-lg-7 col-md-12" id="nkar03">
+                <img src="img/les_champions1.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-5 col-md-12"></div>
+            <div class="col-lg-3 col-md-12" id="nkar04">
+                <img src="img/les_vs_yerevan_basket_23.04.21.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-12 text-left" id="div04">
+                <h3>
+                    <b>
+            Բասկետբոլի VBET Հայաստանի կանանց առաջնության եզրափակչի երկրորդ խաղը՝ ապրիլի 23-ին
+        </b>
+                </h3>
+                <span>
+                    Բասկետբոլի VBET Հայաստանի կանանց 2020-2021 թթ. առաջնության եզրափակչի երկրորդ խաղում միմյանց հետ ուժերը կչափեն «Լես Ֆոքսես» և «Երևան Բասկետ» ակումբները:
+                    Եզրափակչի երկրորդ խաղը տեղի կունենա ապրիլի 23-ին՝ նախկին «Միկա» մարզահամալիրում։ Հանդիպման սկիզբը՝ ժամը 20:15-ին:
+                    Մուտքն ազատ է:
+                    <p><a href="news4/index4.html">MORE</a></p>
+      </span>
+            </div>
+            <!-- <div class="col-lg-7 col-md-12 offset-lg-5" id="nkar05">
+                <div id="nkar005">
+                    <b>
+          ENTER
+          <br>
+          ENTER
+          <br>
+          ENTER
+        </b>
+                </div>
+
+            </div> -->
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="amazing">
+            <h4>
+                <b>
+              FOLLOW US ON INSTAGRAM 
+            </b>
+
+            </h4>
+
+        </div>
+        <div class="row" id="follow">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="instago">
+                <a href="https://www.instagram.com/p/COBPVb1BA6l/" target="_blank"><img src="img/highlights4.jpg" alt="" id="foto"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="instago">
+                <a href="https://www.instagram.com/p/CN6tOywBeVb/" target="_blank"><img src="img/highlights3.jpg" alt="" id="foto"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" id="instago">
+                <a href="https://www.instagram.com/p/CNtuqeyBIUa/" target="_blank"><img src="img/highlights6.jpg" alt="" id="foto"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="amazing">
+            <h4>
+                <b>
+                OUR SPONSORS
+            </b>
+            </h4>
+
+        </div>
+
+        <div class="row" id="spons">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <a href=""><img src="img/LesFoxes.png" alt="" id="sponsid"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <a href=""><img src="img/LesFoxes.png" alt="" id="sponsid"></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <a href=" "><img src="img/LesFoxes.png" alt="" id="sponsid"></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

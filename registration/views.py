@@ -5,7 +5,7 @@ from django.contrib.auth import login, logout
 
 
 def index(request):
-    return render(request, 'nav.html')
+    return render(request, 'home/index.html')
 
 
 def register(request):
