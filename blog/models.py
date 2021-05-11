@@ -4,8 +4,8 @@ from django.db import models
 class Blog(models.Model):
     blog_title = models.CharField(max_length=100, verbose_name="Title")
     content = models.TextField(blank=True, verbose_name="Content")
-    like = models.IntegerField(verbose_name="Like")
-    views = models.IntegerField(verbose_name="Views",default=0)
+    like = models.IntegerField(verbose_name="Like", default=0)
+    views = models.IntegerField(verbose_name="Views", default=0)
 
     def __str__(self):
         return f"{self.blog_title}"

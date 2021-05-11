@@ -3,6 +3,7 @@ from time import sleep
 
 # It is for windows
 options = webdriver.ChromeOptions()
+options.add_argument('headless')
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome('parse/chromedriver.exe', options=options)
 driver.get('http://site.fibaorganizer.com/armfed/league/34175/')
@@ -232,54 +233,6 @@ pl_11_total = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div
 pl_11_permin = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[12]/td[6]')
 pl_11_perg = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[12]/td[7]')
 
-# driver.get('http://site.fibaorganizer.com/armfed/37669/team/4730677/#mbt:283-200$t&0=2')
-
-# # pl1_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[2]/td[3]')
-# pl1_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[2]/td[4]')
-# pl1_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[2]/td[6]')
-#
-# pl2_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[3]/td[3]')
-# pl2_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[3]/td[4]')
-# pl2_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[3]/td[6]')
-#
-# pl3_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[4]/td[3]')
-# pl3_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[4]/td[4]')
-# pl3_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[4]/td[6]')
-#
-# pl4_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[5]/td[3]')
-# pl4_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[5]/td[4]')
-# pl4_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[5]/td[6]')
-#
-# pl5_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[6]/td[3]')
-# pl5_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[6]/td[4]')
-# pl5_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[6]/td[6]')
-#
-# pl6_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[7]/td[3]')
-# pl6_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[7]/td[4]')
-# pl6_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[7]/td[6]')
-#
-# pl7_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[8]/td[3]')
-# pl7_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[8]/td[4]')
-# pl7_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[8]/td[6]')
-#
-# pl8_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[9]/td[3]')
-# pl8_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[9]/td[4]')
-# pl8_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[9]/td[6]')
-#
-# pl9_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[10]/td[3]')
-# pl9_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[10]/td[4]')
-# pl9_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[10]/td[6]')
-#
-# pl10_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[11]/td[3]')
-# pl10_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[11]/td[4]')
-# pl10_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[11]/td[6]')
-#
-# pl11_position = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[12]/td[3]')
-# pl11_height = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[12]/td[4]')
-# pl11_birth = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/div[1]/div/div[2]/table/tbody/tr[12]/td[6]')
-
-# mad_pl = [[pl_1.text,10,pl_1_games.text,pl_1_min.text,pl_1_total.text,pl_1_permin.text,pl_1_perg.text],[pl_2.text,pl2_position.text,pl_2_games.text,pl_2_min.text,pl_2_total.text,pl_2_permin.text,pl_2_perg.text],[pl_3.text,pl3_position.text,pl_3_games.text,pl_3_min.text,pl_3_total.text,pl_3_permin.text,pl_3_perg.text],[pl_4.text,pl4_position.text,pl_4_games.text,pl_4_min.text,pl_4_total.text,pl_4_permin.text,pl_4_perg.text],[pl_5.text,pl5_position.text,pl_5_games.text,pl_5_min.text,pl_5_total.text,pl_5_permin.text,pl_5_perg.text],[pl_6.text,pl6_position.text,pl_6_games.text,pl_6_min.text,pl_6_total.text,pl_6_permin.text,pl_6_perg.text],[pl_7.text,pl7_position.text,pl_7_games.text,pl_7_min.text,pl_7_total.text,pl_7_permin.text,pl_7_perg.text],[pl_8.text,pl8_position.text,pl_8_games.text,pl_8_min.text,pl_8_total.text,pl_8_permin.text,pl_8_perg.text],[pl_9.text,pl9_position.text,pl_9_games.text,pl_9_min.text,pl_9_total.text,pl_9_permin.text,pl_9_perg.text],[pl_10.text,pl10_position.text,pl_10_games.text,pl_10_min.text,pl_10_total.text,pl_10_permin.text,pl_10_perg.text],[pl_11.text,pl11_position.text,pl_11_games.text,pl_11_min.text,pl_11_total.text,pl_11_permin.text,pl_11_perg.text]]
-
 mad_pl = [[pl_1.text, pl_1_games.text, pl_1_min.text, pl_1_total.text, pl_1_permin.text, pl_1_perg.text],
           [pl_2.text, pl_2_games.text, pl_2_min.text, pl_2_total.text, pl_2_permin.text, pl_2_perg.text],
           [pl_3.text, pl_3_games.text, pl_3_min.text, pl_3_total.text, pl_3_permin.text, pl_3_perg.text],
@@ -430,5 +383,58 @@ les_pl = [[les_pl_1.text, les_pl_1_games.text, les_pl_1_min.text, les_pl_1_total
           [les_pl_11.text, les_pl_11_games.text, les_pl_11_min.text, les_pl_11_total.text, les_pl_11_permin.text,
            les_pl_11_perg.text]]
 
+# Mad team leaders
+
+driver.get('http://site.fibaorganizer.com/armfed/34175/team/4730677/')
+
+m_scorer = driver.find_element_by_xpath(
+    '/html/body/div[5]/div/div[1]/div/div/div/div/div/div[3]/div/div[3]/div/div[2]/table/tbody/tr[2]/td[2]/a')
+m_scorer_point = driver.find_element_by_xpath(
+    '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[2]/td[3]/span/strong')
+
+m_rebounder = driver.find_element_by_xpath(
+    '/html/body/div[5]/div/div[1]/div/div/div/div/div/div[3]/div/div[3]/div/div[2]/table/tbody/tr[4]/td[2]/a')
+m_rebounder_point = driver.find_element_by_xpath(
+    '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[4]/td[3]/span/strong')
+
+m_assister = driver.find_element_by_xpath(
+    '/html/body/div[5]/div/div[1]/div/div/div/div/div/div[3]/div/div[3]/div/div[2]/table/tbody/tr[6]/td[2]/a')
+m_assister_point = driver.find_element_by_xpath(
+    '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[6]/td[3]/span/strong')
+
+# Les team leaders
+
+driver.get('http://site.fibaorganizer.com/armfed/41501/team/4725329/')
+
+l_scorer = driver.find_element_by_xpath(
+    '/html/body/div[5]/div/div[1]/div/div/div/div/div/div[3]/div/div[3]/div/div[2]/table/tbody/tr[2]/td[2]/a')
+l_scorer_point = driver.find_element_by_xpath(
+    '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[2]/td[3]/span/strong')
+
+l_rebounder = driver.find_element_by_xpath(
+    '/html/body/div[5]/div/div[1]/div/div/div/div/div/div[3]/div/div[3]/div/div[2]/table/tbody/tr[4]/td[2]/a')
+l_rebounder_point = driver.find_element_by_xpath(
+    '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[4]/td[3]/span/strong')
+
+l_assister = driver.find_element_by_xpath(
+    '/html/body/div[5]/div/div[1]/div/div/div/div/div/div[3]/div/div[3]/div/div[2]/table/tbody/tr[6]/td[2]/a')
+l_assister_point = driver.find_element_by_xpath(
+    '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[6]/td[3]/span/strong')
+
+driver.get('http://site.fibaorganizer.com/armfed/41501/team/4725329/#mbt:283-200$t&0=1')
 
 
+# Les Last Game
+# les_last_date = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[1]')
+les_last_t1 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[2]')
+les_last_t2 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[3]')
+les_last_score = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[4]')
+les_last_place = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[5]')
+
+driver.get('http://site.fibaorganizer.com/armfed/34175/team/4730677/#mbt:283-200$t&0=1')
+# Mad Last Game
+mad_last_date = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[1]')
+mad_last_t1 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[2]')
+mad_last_t2 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[3]')
+mad_last_score = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[4]')
+mad_last_place = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[5]')

@@ -3,7 +3,7 @@ from .models import Blog, CommentModel
 from .forms import SearchForm, CommentForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from parse.parsing import reg_list,vb_list,mad_pl
+# from parse.parsing import reg_list, vb_list, mad_pl
 
 
 def BlogListView(request):
@@ -19,9 +19,9 @@ def BlogListView(request):
         context = {
             'dataset': dataset,
             'form': form,
-            "reg_list": reg_list,
-            "vb_list": vb_list,
-            "mad_pl": mad_pl,
+            # "reg_list": reg_list,
+            # "vb_list": vb_list,
+            # "mad_pl": mad_pl,
         }
     return render(request, 'blog/listview.html', context)
 
@@ -30,6 +30,8 @@ def BlogListView(request):
 def BlogDetailView(request, _id):
     try:
         data = Blog.objects.get(id=_id)
+        data.views = data.views + 1
+        data.save()
         comments = CommentModel.objects.filter(blog=data)
     except Blog.DoesNotExist:
         raise Http404('Data does not exist')

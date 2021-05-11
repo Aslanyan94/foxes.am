@@ -18,96 +18,89 @@
 
 {% for data in dataset %}
 <h3>{{data.blog_title}}</h3>
-<a href = "{% url 'blogs' _id=data.id %}">Read More</a>
-{% if request.user.is_authenticated %}
-        <form method="GET" id="form-like">
-            <div class="likes">
-                <button onclick="{{ post.likes|add:1 }}">{{ post.likes }}</button>
-            </div>
-        </form>
-{% endif %}
+<a href = "{% url 'blogs' _id=data.id %}">Read More</a> <b> Views: {{ data.views }} </b>
 <hr/>
 {% endfor %}
 
-<table>
-    <tr>
-        <td>
-            No
-        </td>
-        <td>
-            Team
-        </td>
-        <td>
-            W/L
-        </td>
-        <td>
-            Points
-        </td>
-    </tr>
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            No-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            Team-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            W/L-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            Points-->
+<!--        </td>-->
+<!--    </tr>-->
 
-{% for team in reg_list %}
-    <tr>
-        <td>
-            {{ team.0 }}
-        </td>
-        <td>
-            {{ team.1 }}
-        </td>
-        <td>
-            {{ team.2 }}
-        </td>
-        <td>
-            {{ team.3 }}
-        </td>
-    </tr>
+<!--{% for team in reg_list %}-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            {{ team.0 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.1 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.2 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.3 }}-->
+<!--        </td>-->
+<!--    </tr>-->
 
-{% endfor %}
-</table>
-<table>
-{% for team in vb_list %}
-    <tr>
-        <td>
-            {{ team.0 }}
-        </td>
-        <td>
-            {{ team.1 }}
-        </td>
-        <td>
-            {{ team.2 }}
-        </td>
-        <td>
-            {{ team.3 }}
-        </td>
-    </tr>
+<!--{% endfor %}-->
+<!--</table>-->
+<!--<table>-->
+<!--{% for team in vb_list %}-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            {{ team.0 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.1 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.2 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.3 }}-->
+<!--        </td>-->
+<!--    </tr>-->
 
-{% endfor %}
-</table>
-<table>
-{% for team in mad_pl %}
-    <tr>
-        <td>
-            {{ team.0 }}
-        </td>
-        <td>
-            {{ team.1 }}
-        </td>
-        <td>
-            {{ team.2 }}
-        </td>
-        <td>
-            {{ team.3 }}
-        </td>
-        <td>
-            {{ team.4 }}
-        </td>
-        <td>
-            {{ team.5 }}
-        </td>
-        <td>
-            {{ team.6 }}
-        </td>
-{% endfor %}
-</table>
+<!--{% endfor %}-->
+<!--</table>-->
+<!--<table>-->
+<!--{% for team in mad_pl %}-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            {{ team.0 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.1 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.2 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.3 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.4 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.5 }}-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            {{ team.6 }}-->
+<!--        </td>-->
+<!--{% endfor %}-->
+<!--</table>-->
 
 </body>
 </html>
