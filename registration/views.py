@@ -2,9 +2,14 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterForm, UserLoginForm
 from django.contrib.auth import login, logout
+from parse.parsing import les_last_list, mad_last_list
 
 
 def index(request):
+    context = {
+        "les_last": les_last_list,
+        "mad_last": mad_last_list,
+    }
     return render(request, 'home/index.html')
 
 
@@ -13,7 +18,7 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request,user)
+            login(request, user)
             messages.success(request, "Your are already registered")
             return redirect('/')
         else:
@@ -33,6 +38,7 @@ def user_login(request):
     else:
         form = UserLoginForm()
     return render(request, "login.html", {'form': form})
+
 
 def user_logout(request):
     logout(request)

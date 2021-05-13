@@ -279,6 +279,9 @@ wm_team6 = driver.find_element_by_xpath('//*[@id="283-300-standings-container"]/
 wm_team6_wl = driver.find_element_by_xpath('//*[@id="283-300-standings-container"]/table/tbody/tr[8]/td[3]')
 wm_team6_point = driver.find_element_by_xpath('//*[@id="283-300-standings-container"]/table/tbody/tr[8]/td[4]')
 
+wom_list = [[wm_n1, wm_team1, wm_team1_wl, wm_team1_point], [wm_n2, wm_team2, wm_team2_wl, wm_team2_point],
+            [wm_n3, wm_team3, wm_team3_wl, wm_team3_point], [wm_n4, wm_team4, wm_team4_wl, wm_team4_point],
+            [wm_n5, wm_team5, wm_team5_wl, wm_team5_point], [wm_n6, wm_team6, wm_team6_wl, wm_team6_point], ]
 # Les Foxes Players
 
 driver.get('http://site.fibaorganizer.com/armfed/41501/team/4725329/#mbt:283-200$t&0=7')
@@ -402,6 +405,8 @@ m_assister = driver.find_element_by_xpath(
 m_assister_point = driver.find_element_by_xpath(
     '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[6]/td[3]/span/strong')
 
+mad_top = [m_scorer, m_scorer_point, m_rebounder, m_rebounder_point, m_assister, m_assister_point]
+
 # Les team leaders
 
 driver.get('http://site.fibaorganizer.com/armfed/41501/team/4725329/')
@@ -421,15 +426,18 @@ l_assister = driver.find_element_by_xpath(
 l_assister_point = driver.find_element_by_xpath(
     '//*[@id="283-200-tab-container"]/div/div[3]/div/div[2]/table/tbody/tr[6]/td[3]/span/strong')
 
+les_top = [l_scorer, l_scorer_point, l_rebounder, l_rebounder_point, l_assister, l_assister_point]
+
 driver.get('http://site.fibaorganizer.com/armfed/41501/team/4725329/#mbt:283-200$t&0=1')
 
-
 # Les Last Game
-# les_last_date = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[1]')
+les_last_date = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[1]')
 les_last_t1 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[2]')
 les_last_t2 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[3]')
 les_last_score = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[4]')
 les_last_place = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[5]')
+
+les_last_list = [les_last_date, les_last_t1, les_last_t2, les_last_score, les_last_place]
 
 driver.get('http://site.fibaorganizer.com/armfed/34175/team/4730677/#mbt:283-200$t&0=1')
 # Mad Last Game
@@ -438,3 +446,5 @@ mad_last_t1 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div
 mad_last_t2 = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[3]')
 mad_last_score = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[4]')
 mad_last_place = driver.find_element_by_xpath('//*[@id="283-200-tab-container"]/div/table/tbody/tr[1]/td[5]')
+
+mad_last_list = [mad_last_date, mad_last_t1, mad_last_t2, mad_last_score, mad_last_place]

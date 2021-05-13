@@ -1,51 +1,39 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# from .models import ALeagueRegular,ALeagueSemifinal,WomenChampionship
-import json
+from parse.parsing import reg_list, sem_list, vb_list, wom_list
+from .models import MadScheduleAndResults2021, MadScheduleAndResults2122, LesScheduleAndResults2021, \
+    LesScheduleAndResults2122
+
 
 #
-# def algreg_views(request):
-#     if request.method == "GET":
-#         a_reg_queryset = ALeagueRegular.objects.all()
-#         response1 = []
-#         league = {}
-#         for team_query in a_reg_queryset:
-#             league["team"] = team_query.team.team_name
-#             league["win"] = team_query.win
-#             league["lose"] = team_query.lose
-#             league["point"] = team_query.point
-#             response1.append(league)
-#
-#         a_sem_queryset = ALeagueSemifinal.objects.all()
-#         response2 = []
-#         league2 = {}
-#         for team_query in a_sem_queryset:
-#             league2["team"] = team_query.team.team_name
-#             league2["win"] = team_query.win
-#             league2["lose"] = team_query.lose
-#             league2["point"] = team_query.point
-#             response2.append(league2)
-#         return HttpResponse(json.dumps({
-#             'status': 'ok',
-#             "data_regular": response1,
-#             "data_semifinal": response2,
-#         }), status=200, content_type='application/json')
-#
-#
-#
-# def women_views(request):
-#     if request.method == "GET":
-#         wom_queryset = WomenChampionship.objects.all()
-#         response_wom = []
-#         league = {}
-#         for team_query in wom_queryset:
-#             league["team"] = team_query.team.team_name
-#             league["win"] = team_query.win
-#             league["lose"] = team_query.lose
-#             league["point"] = team_query.point
-#             response_wom.append(league)
-#
-#         return HttpResponse(json.dumps({
-#             'status': 'ok',
-#             "data_women": response_wom,
-#         }), status=200, content_type='application/json')
+def alg_views(request):
+    if request.method == "GET":
+        mad_2021_query = MadScheduleAndResults2021.objects.all()
+        mad_2122_query = MadScheduleAndResults2122.objects.all()
+        context = {
+            "reg_list": reg_list,
+            "sem_list": sem_list,
+            "schedule2021": mad_2021_query,
+            "schedule2122": mad_2122_query,
+        }
+        return render(request, "league/a_league.html", context)
+
+
+def vb_arm_views(request):
+    if request.method == "GET":
+        context = {
+            "vb_list": vb_list,
+        }
+        return render(request, "league/vb_arm.html", context)
+
+
+def wom_views(request):
+    if request.method == "GET":
+        les_2021_query = LesScheduleAndResults2021.objects.all()
+        les_2122_query = LesScheduleAndResults2122.objects.all()
+        context = {
+            "wom_list": wom_list,
+            "schedule2021": les_2021_query,
+            "schedule2122": les_2122_query,
+        }
+        return render(request, "league/women.html", context)

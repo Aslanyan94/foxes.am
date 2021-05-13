@@ -3,26 +3,11 @@ from .models import Blog, CommentModel
 from .forms import SearchForm, CommentForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-# from parse.parsing import reg_list, vb_list, mad_pl
 
 
 def BlogListView(request):
     dataset = Blog.objects.all()
-    if request.method == 'POST':
-        form = SearchForm(request.POST)
-        if form.is_valid():
-            title = form.cleaned_data['title']
-            blog = Blog.objects.get(blog_title=title)
-            return redirect(f'/blog/{blog.id}')
-    else:
-        form = SearchForm()
-        context = {
-            'dataset': dataset,
-            'form': form,
-            # "reg_list": reg_list,
-            # "vb_list": vb_list,
-            # "mad_pl": mad_pl,
-        }
+    context = {'dataset': dataset, }
     return render(request, 'blog/listview.html', context)
 
 

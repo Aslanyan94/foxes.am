@@ -30,9 +30,6 @@
 
             <h5 id="match">UPCOMING MATCH - </h5>
 
-
-
-
             <div id="registr">
                 {% if request.user.is_authenticated %}
 
@@ -44,7 +41,7 @@
                 </li>
                 {% else %}
                 <li class="nav-item1">
-                    WELCOME ,{{ user.username }} | <a class="nav-link" href="#">SIGN OUT</a>
+                    WELCOME ,{{ user.username }} | <a class="nav-link" href="{% url 'logout' %}">SIGN OUT</a>
                 </li>
             </div>
 
@@ -74,7 +71,7 @@
                             </li>
                             <li class="nav-item">
 
-                                <a class="nav-link" href="#">ABOUT US</a>
+                                <a class="nav-link" href="{% url 'about' %}">ABOUT US</a>
                             </li>
                             <li class="nav-item">
                                 <div class="dropdown">
